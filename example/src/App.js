@@ -1,10 +1,16 @@
 import React from 'react'
 
-import { ExampleComponent } from 'wp-dimensions-control'
+import DimenionsControl from 'wp-dimensions-control'
 import 'wp-dimensions-control/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <DimenionsControl
+      onChange={({ top, right, bottom, left }) =>
+        console.log(top, right, bottom, left)
+      }
+    />
+  )
 }
 
 export default App
