@@ -11,17 +11,22 @@ npm install --save wp-dimensions-control
 ```
 
 ## Usage
+Works only as a WordPress gutenberg block controller
 
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'wp-dimensions-control'
+import DimensionsControl from 'wp-dimensions-control'
 import 'wp-dimensions-control/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return (
+    <DimenionsControl
+      onChange={({ top, right, bottom, left }) =>
+        console.log(top, right, bottom, left)
+      }
+    />
+  )
 }
 ```
 
